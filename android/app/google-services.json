@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "470090155031",
+    "project_id": "epmtestelkony-423c5",
+    "storage_bucket": "epmtestelkony-423c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:470090155031:android:e28661c9df082ffc9a4852",
+        "android_client_info": {
+          "package_name": "com.example.testelkony"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAZTcpC5CXBfVhiXq2nFINClnWbNhG4XCA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

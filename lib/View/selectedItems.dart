@@ -1,6 +1,9 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:testelkony/View/paymentWays.dart';
+import 'package:testelkony/View/checkoutPage.dart';
+
 import 'package:testelkony/consts/colors.dart';
 import 'package:testelkony/models/itemModel.dart';
 
@@ -83,44 +86,44 @@ class SelectedItemsPage extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       'Total Price: \$${totalPrice.toStringAsFixed(2)}',
-                      style:
-                          TextStyle(fontSize: 15, fontWeight: FontWeight.bold,color: redColor),
+                      style: TextStyle(
+                          fontSize: 15,
+                          fontWeight: FontWeight.bold,
+                          color: redColor),
                     ),
                   ),
                 ],
               ),
-               ElevatedButton(
-              style: ButtonStyle(
-                shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                  RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(20.0),
+              ElevatedButton(
+                style: ButtonStyle(
+                  shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                    RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(20.0),
+                    ),
+                  ),
+                  minimumSize: MaterialStateProperty.all(Size(100, 50)),
+                  backgroundColor: MaterialStateProperty.all(
+                    green,
+                  ),
+                  shadowColor: MaterialStateProperty.all(Colors.transparent),
+                ),
+                onPressed: () {
+                  Get.to(CheckoutPage(totalPrice: totalPrice,items:selectedItems ,));
+                },
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                    top: 10,
+                    bottom: 10,
+                  ),
+                  child: Text(
+                    "Confirm",
+                    style: TextStyle(
+                      fontSize: 18,
+                      color: Colors.white,
+                    ),
                   ),
                 ),
-                minimumSize: MaterialStateProperty.all(Size(100, 50)),
-                backgroundColor: MaterialStateProperty.all(
-                  green,
-                ),
-                shadowColor: MaterialStateProperty.all(Colors.transparent),
               ),
-              onPressed: () {
-                
-                  Get.to(PaymentMethods());
-               
-              },
-              child: Padding(
-                padding: const EdgeInsets.only(
-                  top: 10,
-                  bottom: 10,
-                ),
-                child: Text(
-                  "Confirm",
-                  style: TextStyle(
-                    fontSize: 18,
-                    color: Colors.white,
-                  ),
-                ),
-              ),
-            ),
             ],
           ),
         ),

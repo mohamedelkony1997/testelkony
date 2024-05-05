@@ -31,7 +31,7 @@ dependencies:
   flutter:
     sdk: flutter
   get: ^4.6.6
-  http: ^1.2.1
+  http: 0.13.6
   firebase_cloud_firestore: ^4.15.8
   firebase_auth: ^4.19.2
   
@@ -42,6 +42,7 @@ dependencies:
   equatable: ^2.0.5
   velocity_x: ^4.1.2
   webview_flutter: ^4.7.0
+  flutter_paypal_checkout: ^1.0.1
 
 dev_dependencies:
   flutter_test:
